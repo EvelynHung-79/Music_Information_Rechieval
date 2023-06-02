@@ -1,6 +1,9 @@
-## MIR - HW #1
+# MIR - HW #1
 Audio Signal Processing & Musical Key Detection
-# Question 1.
+
+
+**Question 1.**
+
 a. 
 
 <img width="416" alt="image" src="https://github.com/EvelynHung-79/Music_Information_Rechieval/assets/57160523/c85f6a22-b18f-4b0c-ae27-e90a0513c283">
@@ -12,11 +15,14 @@ b.
 
 c. For x1, the sound is increasing throughout the first 6.5 seconds, and decreasing afterward. As for x2, the sound is like oscillating, increasing and decreasing, and is more observable in the end.
 d. Here are the two spectrograms for x1 and x2. The first spectrogram does look like how the audio sound to me, but it didn’t match the idea of keep increasing like a bird’s chirp. The second spectrogram look like how it sound to me. The frequency oscillates throughout that 10 seconds.
+
 <img width="204" alt="image" src="https://github.com/EvelynHung-79/Music_Information_Rechieval/assets/57160523/bf1b8e3f-25c3-4668-b6e7-914e44f0af64">
 <img width="205" alt="image" src="https://github.com/EvelynHung-79/Music_Information_Rechieval/assets/57160523/b12dac4c-e2b0-4794-b48d-5b663c1a5c52">
 
-# Question 2.
+**Question 2.**
+
 a. For Global Key detection, I used K-S detection with late fusion. And here is the result I got after the prediction.
+
 <img width="403" alt="image" src="https://github.com/EvelynHung-79/Music_Information_Rechieval/assets/57160523/63c915a0-c883-4e0d-8f40-95a3d9825a55">
 <img width="403" alt="image" src="https://github.com/EvelynHung-79/Music_Information_Rechieval/assets/57160523/6defd00e-f4b3-425b-aaa9-97a0d7188ac1">
 
@@ -32,9 +38,11 @@ b. For local key detection, I also used the same approach. But for the frames ex
 I found that length of y is multiple of sampling rate and the music length. So I cut the y to a smaller duration (30 seconds) tmp_y.
 
 And for the RA and WA score, I decided to check my estimations one by one with the ground truth file. For example, if the estimation at 10th second is within that (start ~ end) range in the csv file, then I check the estimation correspondingly.
+
 <img width="416" alt="image" src="https://github.com/EvelynHung-79/Music_Information_Rechieval/assets/57160523/65cfc9a3-bbcf-42aa-a016-2e27d3850ad4">
 
 By doing so, I can get the index of the correct frame on the csv file.
+
 |          |   stft   |    cqt   |   cens   |
 | -------- | -------- | -------- | -------- |
 | RA score |  0.4263  |  0.4940  |  0.4741  |
